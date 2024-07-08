@@ -1,0 +1,6 @@
+# crontab
+
+# Executar script Python nos horários especificados
+# 0 9,12,15,18,19,22 * * * python /app/main.py >> /var/log/cron.log 2>&1
+*/3 * * * * python /app/main.py >> /var/log/cron.log 2>&1
+

@@ -1,0 +1,10 @@
+{
+  "zApiUrl": "",
+  "clientToken": "",
+  "apps": [
+    {
+      "name": "google",
+      "url": "https://google.com.br"
+    }
+  ]
+}

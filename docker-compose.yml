@@ -1,0 +1,7 @@
+version: '3'
+services:
+  monitor-alert:
+    build: .
+    restart: always
+    # volumes:
+    #    - ./logs:/var/log/cron.log
