@@ -37,8 +37,13 @@ def send_message(body: dict):
 
 def verify_service(app):
     url = app['url']
-    response = requests.get(url)
-    
+    response = None
+
+    if 'method' in app and app['method'] == "post":
+      response = requests.post(url, json=app['body'])
+    else:
+      response = requests.get(url)
+             
     if response.status_code == 200:
       send_message({'phone': CONFIG['phone'], 'message': f"✅ Service *{app['name']}*"}) 
     else:
